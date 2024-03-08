@@ -1,3 +1,11 @@
-from django.shortcuts import render
+# from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Concesionario
+from .serializers import ConcesionarioSerializer
+
+class ConcesionarioViewSet(viewsets.ModelViewSet):
+    model = Concesionario
+    queryset = Concesionario.objects.all()
+    serializer_class = ConcesionarioSerializer
+
