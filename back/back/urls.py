@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'', include('concesionario.urls')),
     url(r'', include('productos_extra.urls')),
     url(r'', include('financiacion.urls')),
+    url(r'', include('modelos.urls')),
     path('admin/', admin.site.urls),
 ]
