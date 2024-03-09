@@ -1,8 +1,8 @@
 from django.http import JsonResponse
 from django.db.models import Q
 
+from rest_framework.decorators import action
 from rest_framework import viewsets, mixins, status
-from rest_framework.decorators import list_route
 
 from .models import Modelo, Parte
 from .serializers import ModeloSerializer, ModeloListSerializer
@@ -22,7 +22,7 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
     def get_serializer_class(self):
         return self.serializers.get(self.action, self.serializer_class)
 
-    @list_route(methods=['get'])
+    @action(detail=False, methods=['get'])
     def toyota_gazoo_racing(self, request):
         '''
            Api para la seccion de navegacion Toyota Gazoo Racing, suponiendo que es un modelo
@@ -36,7 +36,7 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
             response = JsonResponse({'error': 'Modelo inexistente.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         return response
 
-    @list_route(methods=['get'])
+    @action(detail=False, methods=['get'])
     def toyota_hibridos(self, request):
         '''
            Api para la seccion de navegacion Toyota hibridos, devuelve los modelos de Toyota
@@ -56,7 +56,7 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
         return response
 
     
-    @list_route(methods=['get'])
+    @action(detail=False, methods=['get'])
     def innovacion(self, request):
         '''
            Api para la seccion de navegacion Innovacion, devuelve los ultimos 5 modelos sacados

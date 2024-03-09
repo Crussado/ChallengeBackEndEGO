@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 
 from rest_framework import viewsets, mixins, status
-from rest_framework.decorators import list_route
+from rest_framework.decorators import action
 
 from .models import Extra
 from .serializers import ExtraSerializer
@@ -13,7 +13,7 @@ class ExtraViewSet(mixins.RetrieveModelMixin,
     queryset = Extra.objects.all()
     serializer_class = ExtraSerializer
 
-    @list_route(methods=['get'])
+    @action(detail=False, methods=['get'])
     def toyota_mobility_service(self, request):
         '''
            Api para la seccion de navegacion Toyota Mobility Service, devuelve los servicios de movilidad
