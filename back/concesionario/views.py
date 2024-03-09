@@ -8,4 +8,3 @@ class ConcesionarioViewSet(mixins.ListModelMixin,
     model = Concesionario
     queryset = Concesionario.objects.all()
     serializer_class = ConcesionarioSerializer
-
