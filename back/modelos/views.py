@@ -19,7 +19,7 @@ class ModeloCarroceriaFilterBackend(filters.BaseFilterBackend):
                 queryset = queryset.filter(Q(carroceria__tipo='Pickup') | Q(carroceria__tipo='Comercial'))
             # Filtro para Autos
             if tipo_carroceria == 'auto':
-                queryset = queryset.exlude(
+                queryset = queryset.exclude(
                     Q(carroceria__tipo='Pickup') |
                     Q(carroceria__tipo='Comercial') |
                     Q(carroceria__tipo='SUV') |

@@ -44,6 +44,10 @@ REST_FRAMEWORK = {
     # 'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
 }
 
+FIXTURE_DIRS = (
+    os.path.join(os.getcwd(), "fixtures"),
+)
+
 INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework',

@@ -1,0 +1,149 @@
+[
+    {
+        "pk": 1,
+        "model": "modelos.carroceria",
+        "fields": {
+            "tipo": "Pickup"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "modelos.carroceria",
+        "fields": {
+            "tipo": "Comercial"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "modelos.carroceria",
+        "fields": {
+            "tipo": "SUV"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "modelos.carroceria",
+        "fields": {
+            "tipo": "Crossover"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "modelos.carroceria",
+        "fields": {
+            "tipo": "Sedan"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "modelos.carroceria",
+        "fields": {
+            "tipo": "Deportivo"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "modelos.modelo",
+        "fields": {
+            "nombre": "Modelo K1",
+            "marca": "Marca R1",
+            "descripcion": "",
+            "precio": "10.00",
+            "anio": 2000,
+            "url_img": "",
+            "resumen": "",
+            "carroceria": 1,
+            "partes": []
+        }
+    },
+    {
+        "pk": 2,
+        "model": "modelos.modelo",
+        "fields": {
+            "nombre": "Modelo K2",
+            "marca": "Marca R2",
+            "descripcion": "",
+            "precio": "10.00",
+            "anio": 2001,
+            "url_img": "",
+            "resumen": "",
+            "carroceria": 2,
+            "partes": []
+        }
+    },
+    {
+        "pk": 3,
+        "model": "modelos.modelo",
+        "fields": {
+            "nombre": "Modelo K3",
+            "marca": "Marca R3",
+            "descripcion": "",
+            "precio": "10.00",
+            "anio": 2000,
+            "url_img": "",
+            "resumen": "",
+            "carroceria": 3,
+            "partes": []
+        }
+    },
+    {
+        "pk": 4,
+        "model": "modelos.modelo",
+        "fields": {
+            "nombre": "Modelo K4",
+            "marca": "Marca R4",
+            "descripcion": "",
+            "precio": "10.00",
+            "anio": 2000,
+            "url_img": "",
+            "resumen": "",
+            "carroceria": 4,
+            "partes": []
+        }
+    },
+    {
+        "pk": 5,
+        "model": "modelos.modelo",
+        "fields": {
+            "nombre": "Modelo K5",
+            "marca": "Marca R5",
+            "descripcion": "",
+            "precio": "10.00",
+            "anio": 2000,
+            "url_img": "",
+            "resumen": "",
+            "carroceria": 5,
+            "partes": []
+        }
+    },
+    {
+        "pk": 6,
+        "model": "modelos.modelo",
+        "fields": {
+            "nombre": "Modelo K6",
+            "marca": "Marca R6",
+            "descripcion": "",
+            "precio": "10.00",
+            "anio": 2000,
+            "url_img": "",
+            "resumen": "",
+            "carroceria": 6,
+            "partes": []
+        }
+    },
+    {
+        "pk": 7,
+        "model": "modelos.modelo",
+        "fields": {
+            "nombre": "Modelo K7",
+            "marca": "Marca R7",
+            "descripcion": "",
+            "precio": "10.00",
+            "anio": 2000,
+            "url_img": "",
+            "resumen": "",
+            "carroceria": 6,
+            "partes": []
+        }
+    }
+]
