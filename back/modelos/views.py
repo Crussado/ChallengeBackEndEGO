@@ -2,10 +2,29 @@ from django.http import JsonResponse
 from django.db.models import Q
 
 from rest_framework.decorators import action
-from rest_framework import viewsets, mixins, status
+from rest_framework import viewsets, mixins, status, filters
 
 from .models import Modelo, Parte
 from .serializers import ModeloSerializer, ModeloListSerializer
+
+class ModeloCarroceriaFilterBackend(filters.BaseFilterBackend):
+    def filter_queryset(self, request, queryset, view):
+        tipo_carroceria = request.query_params.get('carroceria')
+        if tipo_carroceria:
+            # Filtro para SUVs y Crossovers
+            if tipo_carroceria == 'syc':
+                queryset = queryset.filter(Q(carroceria__tipo='SUV') | Q(carroceria__tipo='Crossover'))
+            # Filtro Pickups y Comerciales
+            if tipo_carroceria == 'pyc':
+                queryset = queryset.filter(Q(carroceria__tipo='Pickup') | Q(carroceria__tipo='Comercial'))
+            # Filtro para Autos
+            if tipo_carroceria == 'auto':
+                queryset = queryset.exlude(
+                    Q(carroceria__tipo='Pickup') |
+                    Q(carroceria__tipo='Comercial') |
+                    Q(carroceria__tipo='SUV') |
+                    Q(carroceria__tipo='Crossover'))
+        return queryset
 
 class ModeloViewSet(mixins.RetrieveModelMixin,
                     mixins.ListModelMixin,
@@ -13,7 +32,9 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
     model = Modelo
     queryset = Modelo.objects.all()
     serializer_class = ModeloSerializer
-
+    filter_backends = (ModeloCarroceriaFilterBackend,)
+    ordering_fields = ['anio', 'precio']
+    ordering = ['anio']
     serializers = {
         'retrieve': ModeloSerializer,
         'list': ModeloListSerializer,
