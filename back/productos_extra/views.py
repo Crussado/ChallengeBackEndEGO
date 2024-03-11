@@ -22,9 +22,9 @@ class ExtraViewSet(mixins.RetrieveModelMixin,
         try:
             servicio_nombre = 'Toyota Mobility'
             servicios = Extra.objects.filter(tipo=True, nombre__icontains=servicio_nombre)
-            
+
             data = self.serializer_class(servicios, many=True).data
-            response = JsonResponse(data=data, status=status.HTTP_200_OK)
+            response = JsonResponse(data={ 'results': data }, status=status.HTTP_200_OK)
         except Exception as ex:
             response = JsonResponse({'error': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         return response

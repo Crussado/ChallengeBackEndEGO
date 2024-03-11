@@ -32,8 +32,8 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
     model = Modelo
     queryset = Modelo.objects.all()
     serializer_class = ModeloSerializer
-    filter_backends = (ModeloCarroceriaFilterBackend,)
-    ordering_fields = ['anio', 'precio']
+    filter_backends = (ModeloCarroceriaFilterBackend, filters.OrderingFilter)
+    ordering_fields = ('anio', 'precio')
     ordering = ['anio']
     serializers = {
         'retrieve': ModeloSerializer,
@@ -50,7 +50,7 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
            lo devuelve. 
         '''
         try:
-            modelo = Modelo.objects.get(marca='Toyota', modelo='Gazoo Racing')
+            modelo = Modelo.objects.get(marca='Toyota', nombre='Gazoo Racing')
             data = self.serializer_class(modelo).data
             response = JsonResponse(data, status=status.HTTP_200_OK)
         except Modelo.DoesNotExist:
@@ -71,7 +71,7 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
             modelos = Modelo.objects.filter(partes=partes.first()).filter(partes=partes.last())
             data = self.serializer_class(modelos, many=True).data
 
-            response = JsonResponse(data, status=status.HTTP_200_OK)
+            response = JsonResponse({ 'results': data }, status=status.HTTP_200_OK)
         except Exception as ex:
             response = JsonResponse({'error': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         return response
@@ -87,7 +87,7 @@ class ModeloViewSet(mixins.RetrieveModelMixin,
             modelos = Modelo.objects.order_by('-anio')[:5]
 
             data = self.serializer_class(modelos, many=True).data
-            response = JsonResponse(data, status=status.HTTP_200_OK)
+            response = JsonResponse({ 'results': data }, status=status.HTTP_200_OK)
         except Exception as ex:
             response = JsonResponse({'error': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         return response

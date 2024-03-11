@@ -1,6 +1,33 @@
 [
     {
         "pk": 1,
+        "model": "modelos.parte",
+        "fields": {
+            "nombre": "Transmision automatica",
+            "descripcion": "",
+            "url_img": ""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "modelos.parte",
+        "fields": {
+            "nombre": "Transmision manual",
+            "descripcion": "",
+            "url_img": ""
+        }
+    },
+    {
+        "pk": 3,
+        "model": "modelos.parte",
+        "fields": {
+            "nombre": "Suspensiones",
+            "descripcion": "",
+            "url_img": ""
+        }
+    },
+    {
+        "pk": 1,
         "model": "modelos.carroceria",
         "fields": {
             "tipo": "Pickup"
@@ -48,7 +75,7 @@
             "nombre": "Modelo K1",
             "marca": "Marca R1",
             "descripcion": "",
-            "precio": "10.00",
+            "precio": "110.10",
             "anio": 2000,
             "url_img": "",
             "resumen": "",
@@ -63,7 +90,7 @@
             "nombre": "Modelo K2",
             "marca": "Marca R2",
             "descripcion": "",
-            "precio": "10.00",
+            "precio": "110.00",
             "anio": 2001,
             "url_img": "",
             "resumen": "",
@@ -78,8 +105,8 @@
             "nombre": "Modelo K3",
             "marca": "Marca R3",
             "descripcion": "",
-            "precio": "10.00",
-            "anio": 2000,
+            "precio": "9.00",
+            "anio": 1900,
             "url_img": "",
             "resumen": "",
             "carroceria": 3,
@@ -93,7 +120,7 @@
             "nombre": "Modelo K4",
             "marca": "Marca R4",
             "descripcion": "",
-            "precio": "10.00",
+            "precio": "13.00",
             "anio": 2000,
             "url_img": "",
             "resumen": "",
@@ -108,8 +135,8 @@
             "nombre": "Modelo K5",
             "marca": "Marca R5",
             "descripcion": "",
-            "precio": "10.00",
-            "anio": 2000,
+            "precio": "10.02",
+            "anio": 2014,
             "url_img": "",
             "resumen": "",
             "carroceria": 5,
@@ -121,29 +148,29 @@
         "model": "modelos.modelo",
         "fields": {
             "nombre": "Modelo K6",
-            "marca": "Marca R6",
+            "marca": "Toyota",
             "descripcion": "",
             "precio": "10.00",
-            "anio": 2000,
+            "anio": 2015,
             "url_img": "",
             "resumen": "",
             "carroceria": 6,
-            "partes": []
+            "partes": [1, 2, 3]
         }
     },
     {
         "pk": 7,
         "model": "modelos.modelo",
         "fields": {
-            "nombre": "Modelo K7",
-            "marca": "Marca R7",
+            "nombre": "Gazoo Racing",
+            "marca": "Toyota",
             "descripcion": "",
             "precio": "10.00",
-            "anio": 2000,
+            "anio": 2100,
             "url_img": "",
             "resumen": "",
             "carroceria": 6,
-            "partes": []
+            "partes": [1, 2]
         }
     }
 ]

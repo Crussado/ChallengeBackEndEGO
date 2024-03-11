@@ -1,0 +1,52 @@
+[
+    {
+        "pk": 1,
+        "model": "productos_extra.extra",
+        "fields": {
+            "nombre": "Lavado",
+            "precio": "10.00",
+            "descripcion": "",
+            "tipo": true
+        }
+    },
+    {
+        "pk": 2,
+        "model": "productos_extra.extra",
+        "fields": {
+            "nombre": "Toyota Mobility Basic",
+            "precio": "10.00",
+            "descripcion": "",
+            "tipo": true
+        }
+    },
+    {
+        "pk": 3,
+        "model": "productos_extra.extra",
+        "fields": {
+            "nombre": "Toyota Mobility Pro",
+            "precio": "11.00",
+            "descripcion": "",
+            "tipo": true
+        }
+    },
+    {
+        "pk": 3,
+        "model": "productos_extra.extra",
+        "fields": {
+            "nombre": "Limpiador",
+            "precio": "11.00",
+            "descripcion": "",
+            "tipo": false
+        }
+    },
+    {
+        "pk": 3,
+        "model": "productos_extra.extra",
+        "fields": {
+            "nombre": "Extra Toyota Mobility Premium",
+            "precio": "11.99",
+            "descripcion": "",
+            "tipo": true
+        }
+    }
+]
