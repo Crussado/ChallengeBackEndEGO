@@ -4,7 +4,7 @@ Repositorio prueba técnica para el puesto de Backend Python/Django de EGO.
 Pasos:
 * Clonar el repositorio
 * (Opcional pero recomendado):
-  * Instalar virtualenv de python `pipx install virtualenv`.
+  * Instalar virtualenv de python `pip install virtualenv`.
   * `virtualenv -p=python3.7 ENV`
   * `source ENV/bin/activate`
 * `cd ChallengeBackEndEGO`
