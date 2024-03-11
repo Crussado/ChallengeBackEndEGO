@@ -2,15 +2,13 @@
 Repositorio prueba técnica para el puesto de Backend Python/Django de EGO.
 # Uso e Instalacion
 Pasos:
-- Clonar el repositorio
-- (Opcional pero recomendado):
-
-  *`virtualenv -p=python3.7 ENV`
-
-  *`source ENV/bin/activate`
-- `cd ChallengeBackEndEGO`
-- Instalar los requerimientos: `pip install -r requirements.txt`
-- Habilitar el servidor `python back/manage.py runserver`
+* Clonar el repositorio
+* (Opcional pero recomendado):
+  * `virtualenv -p=python3.7 ENV`
+  * `source ENV/bin/activate`
+* `cd ChallengeBackEndEGO`
+* Instalar los requerimientos: `pip install -r requirements.txt`
+* Habilitar el servidor `python back/manage.py runserver`
 
 Desde `localhost:8000/admin` obtenemos el admin para administrar la base de datos. Es posible loguearse utilizando `admin` como usuario y contraseña.
 
