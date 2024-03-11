@@ -9,6 +9,7 @@ Pasos:
 - `cd ChallengeBackEndEGO`
 - Instalar los requerimientos: `pip install -r requirements.txt`
 - Habilitar el servidor `python back/manage.py runserver`
+
 Desde `localhost:8000/admin` obtenemos el admin para administrar la base de datos. Es posible loguearse utilizando `admin` como usuario y contraseña.
 
 Desde `localhost:8000/swagger/` o `localhost:8000/redoc/` se obtiene una documentacion sobre las apis habilitadas.
